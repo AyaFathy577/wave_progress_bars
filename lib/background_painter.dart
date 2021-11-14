@@ -8,18 +8,20 @@ class BackgroundBarPainter extends CustomPainter {
   final Color progressColor;
   final Paint trackPaint;
   final Paint progressPaint;
+
   BackgroundBarPainter(
-      {this.widthOfContainer,
-      this.heightOfContainer,
-      this.initialColor,
-      this.progressColor,
-      this.progresPercentage})
+      {required this.widthOfContainer,
+      required this.heightOfContainer,
+      required this.initialColor,
+      required this.progressColor,
+      required this.progresPercentage})
       : trackPaint = new Paint()
           ..color = initialColor
           ..style = PaintingStyle.fill,
         progressPaint = new Paint()
           ..color = progressColor
           ..style = PaintingStyle.fill;
+
   @override
   void paint(Canvas canvas, Size size) {
     canvas.drawRRect(

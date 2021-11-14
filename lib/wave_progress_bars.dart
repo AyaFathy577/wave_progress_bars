@@ -19,12 +19,12 @@ class WaveProgressBar extends StatefulWidget {
   WaveProgressBar({
     this.isVerticallyAnimated = true,
     this.isHorizontallyAnimated = true,
-    this.listOfHeights,
+    required this.listOfHeights,
     this.initalColor = Colors.red,
     this.progressColor = Colors.green,
     this.backgroundColor = Colors.white,
-    @required this.width,
-    @required this.progressPercentage,
+    required this.width,
+    required this.progressPercentage,
     this.timeInMilliSeconds = 20000,
   });
 
@@ -36,12 +36,12 @@ class WaveProgressBar extends StatefulWidget {
 
 class WaveProgressBarState extends State<WaveProgressBar>
     with SingleTickerProviderStateMixin {
-  final List<Widget> arrayOfBars = new List();
-  Animation<double> horizontalAnimation;
-  Animation<double> verticalAnimation;
-  AnimationController controller;
-  double begin;
-  double end;
+  final List<Widget> arrayOfBars = [];
+  late Animation<double> horizontalAnimation;
+  late Animation<double> verticalAnimation;
+  late AnimationController controller;
+  late double begin;
+  late double end;
   
   @override
   void initState() {

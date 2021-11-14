@@ -11,14 +11,15 @@ class SingleBarPainter extends CustomPainter {
   final double actualSeekBarHeight;
   final double startingPosition;
   final double heightOfContainer;
+
   SingleBarPainter(
-      {this.backgroundColor,
+      {required this.backgroundColor,
       this.barBorderRadius = 0,
-      @required this.singleBarWidth,
-      @required this.maxSeekBarHeight,
-      @required this.actualSeekBarHeight,
-      @required this.heightOfContainer,
-      @required this.startingPosition})
+      required this.singleBarWidth,
+      required this.maxSeekBarHeight,
+      required this.actualSeekBarHeight,
+      required this.heightOfContainer,
+      required this.startingPosition})
       : trackPaint = new Paint()
           ..color = barColor
           ..style = PaintingStyle.fill,
